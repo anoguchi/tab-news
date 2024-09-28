@@ -1,8 +1,8 @@
 function Home() {
   return (
-    <div>
+    <main>
       <h1>Welcome to the jungle baby! 😁✌️</h1>
-    </div>
+    </main>
   );
 }
 

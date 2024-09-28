@@ -1,4 +1,4 @@
-const calculadora = require("../models/calculadora");
+const calculadora = require("../../models/calculadora");
 
 test("somar 2 + 2 deveria retornar 4", () => {
   const resultado = calculadora.somar(2, 2);
@@ -27,5 +27,10 @@ test("somar [100, 100] + 'banana' deveria retornar 'Erro'", () => {
 
 test("somar {} + 'banana' deveria retornar 'Erro'", () => {
   const resultado = calculadora.somar({}, "banana");
+  expect(resultado).toBe("Erro");
+});
+
+test("passar sem parametros", () => {
+  const resultado = calculadora.somar();
   expect(resultado).toBe("Erro");
 });
